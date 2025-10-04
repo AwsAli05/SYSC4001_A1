@@ -19,9 +19,12 @@ int main(int argc, char** argv) {
     std::string execution;  //!< string to accumulate the execution output
 
     /******************ADD YOUR VARIABLES HERE*************************/
-
-
-
+    long long current_time = 0;
+    auto log_line = [&](long long duration, const std::string& what) {
+        execution += std::to_string(current_time) + ", " +
+                     std::to_string(duration) + ", " + what + "\n";
+        current_time += duration;
+    };
     /******************************************************************/
 
     //parse each line of the input trace file
@@ -29,9 +32,37 @@ int main(int argc, char** argv) {
         auto [activity, duration_intr] = parse_trace(trace);
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
+        if (activity == "CPU") {
+            log_line(duration_intr, "CPU burst");
+        } else if (activity == "SYSCALL" || activity == "END_IO") {
+            int dev = duration_intr;
+            long long dev_delay = 0;
+            if (dev >= 0 && dev < (int)delays.size()) dev_delay = delays[dev];
 
+            log_line(1, "switch to kernel mode");
+            log_line(10, "context saved");
 
+            long long mem_pos = (long long)dev * 2LL;
+            log_line(1, "find vector " + std::to_string(dev) +
+                           " in memory position " + std::to_string(mem_pos));
 
+            log_line(1, "obtain ISR address");
+
+            long long body_budget = dev_delay - 14;
+            if (body_budget < 0) body_budget = 0;
+
+            const std::string body_label =
+                (activity == "END_IO") ? "store information in memory"
+                                       : "call device driver";
+
+            while (body_budget > 0) {
+                long long chunk = (body_budget >= 40) ? 40 : body_budget;
+                log_line(chunk, body_label);
+                body_budget -= chunk;
+            }
+
+            log_line(1, "IRET");
+        }
         /************************************************************************/
 
     }
