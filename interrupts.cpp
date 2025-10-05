@@ -20,15 +20,16 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
     long long current_time = 0;
+    long long CTX_SAVE_MS  = 20;
+    if (const char* e = std::getenv("CTX_SAVE_MS")) CTX_SAVE_MS = std::stoll(e);
     auto log_line = [&](long long duration, const std::string& what) {
         execution += std::to_string(current_time) + ", " +
-                     std::to_string(duration) + ", " + what + "\n";
+                    std::to_string(duration) + ", " + what + "\n";
         current_time += duration;
     };
     /******************************************************************/
 
-    //parse each line of the input trace file
-    while(std::getline(input_file, trace)) {
+    while (std::getline(input_file, trace)) {
         auto [activity, duration_intr] = parse_trace(trace);
 
         /******************ADD YOUR SIMULATION CODE HERE*************************/
@@ -39,32 +40,22 @@ int main(int argc, char** argv) {
             long long dev_delay = 0;
             if (dev >= 0 && dev < (int)delays.size()) dev_delay = delays[dev];
 
-            log_line(1, "switch to kernel mode");
-            log_line(10, "context saved");
+            auto [pre, t_after] = intr_boilerplate((int)current_time, dev, (int)CTX_SAVE_MS, vectors);
+            execution += pre;
+            current_time = t_after;
 
-            long long mem_pos = (long long)dev * 2LL;
-            log_line(1, "find vector " + std::to_string(dev) +
-                           " in memory position " + std::to_string(mem_pos));
-
-            log_line(1, "obtain ISR address");
-
-            long long body_budget = dev_delay - 14;
-            if (body_budget < 0) body_budget = 0;
+            long long overhead = CTX_SAVE_MS + 4;
+            long long body_ms = std::max(0LL, dev_delay - overhead);
+            if (const char* e = std::getenv("ISR_BODY_MS")) body_ms = std::stoll(e);
 
             const std::string body_label =
-                (activity == "END_IO") ? "store information in memory"
-                                       : "call device driver";
+                (activity == "END_IO") ? "store information in memory" : "call device driver";
 
-            while (body_budget > 0) {
-                long long chunk = (body_budget >= 40) ? 40 : body_budget;
-                log_line(chunk, body_label);
-                body_budget -= chunk;
-            }
+            if (body_ms > 0) log_line(body_ms, body_label);
 
             log_line(1, "IRET");
         }
         /************************************************************************/
-
     }
 
     input_file.close();
