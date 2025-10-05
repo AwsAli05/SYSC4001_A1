@@ -22,6 +22,13 @@ int main(int argc, char** argv) {
     long long current_time = 0;
     long long CTX_SAVE_MS  = 20;
     if (const char* e = std::getenv("CTX_SAVE_MS")) CTX_SAVE_MS = std::stoll(e);
+
+    long long ADDR_BYTES   = 2;   // 2 or 4 (address width for vector/PC)
+    if (const char* e = std::getenv("ADDR_BYTES")) ADDR_BYTES = std::stoll(e);
+
+    long long CPU_SPEEDUP  = 1;   // 1=no change, 2=2x faster CPU, 4=4x faster, etc.
+    if (const char* e = std::getenv("CPU_SPEEDUP")) CPU_SPEEDUP = std::stoll(e);
+
     auto log_line = [&](long long duration, const std::string& what) {
         execution += std::to_string(current_time) + ", " +
                     std::to_string(duration) + ", " + what + "\n";
@@ -32,9 +39,11 @@ int main(int argc, char** argv) {
     while (std::getline(input_file, trace)) {
         auto [activity, duration_intr] = parse_trace(trace);
 
-        /******************ADD YOUR SIMULATION CODE HERE*************************/
+    /******************ADD YOUR SIMULATION CODE HERE*************************/
         if (activity == "CPU") {
-            log_line(duration_intr, "CPU burst");
+            long long d = duration_intr;
+            if (CPU_SPEEDUP > 1) d = (d + CPU_SPEEDUP - 1) / CPU_SPEEDUP; // ceil divide
+            log_line(d, "CPU burst");
         } else if (activity == "SYSCALL" || activity == "END_IO") {
             int dev = duration_intr;
             long long dev_delay = 0;
@@ -48,15 +57,21 @@ int main(int argc, char** argv) {
             long long body_ms = std::max(0LL, dev_delay - overhead);
             if (const char* e = std::getenv("ISR_BODY_MS")) body_ms = std::stoll(e);
 
-            const std::string body_label =
-                (activity == "END_IO") ? "store information in memory" : "call device driver";
+            if (ADDR_BYTES > 2) {
+                long long extra = (ADDR_BYTES - 2); // +1 ms per extra byte for find+load combined
+                log_line(extra, "memory access (wider address)");
+            }
 
+            const std::string body_label =
+                (activity == "END_IO") ? "store information in memory"
+                                    : "call device driver";
             if (body_ms > 0) log_line(body_ms, body_label);
 
             log_line(1, "IRET");
         }
-        /************************************************************************/
+    /************************************************************************/
     }
+
 
     input_file.close();
 
