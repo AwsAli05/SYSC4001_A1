@@ -1,0 +1,463 @@
+0, 49, CPU burst
+49, 1, switch to kernel mode
+50, 30, context saved
+80, 1, find vector 6 in memory position 12
+81, 1, obtain ISR address
+82, 251, call device driver
+333, 1, IRET
+334, 99, CPU burst
+433, 1, switch to kernel mode
+434, 30, context saved
+464, 1, find vector 6 in memory position 12
+465, 1, obtain ISR address
+466, 251, store information in memory
+717, 1, IRET
+718, 72, CPU burst
+790, 1, switch to kernel mode
+791, 30, context saved
+821, 1, find vector 13 in memory position 26
+822, 1, obtain ISR address
+823, 622, call device driver
+1445, 1, IRET
+1446, 29, CPU burst
+1475, 1, switch to kernel mode
+1476, 30, context saved
+1506, 1, find vector 13 in memory position 26
+1507, 1, obtain ISR address
+1508, 622, store information in memory
+2130, 1, IRET
+2131, 19, CPU burst
+2150, 1, switch to kernel mode
+2151, 30, context saved
+2181, 1, find vector 8 in memory position 16
+2182, 1, obtain ISR address
+2183, 986, call device driver
+3169, 1, IRET
+3170, 66, CPU burst
+3236, 1, switch to kernel mode
+3237, 30, context saved
+3267, 1, find vector 8 in memory position 16
+3268, 1, obtain ISR address
+3269, 986, store information in memory
+4255, 1, IRET
+4256, 11, CPU burst
+4267, 1, switch to kernel mode
+4268, 30, context saved
+4298, 1, find vector 4 in memory position 8
+4299, 1, obtain ISR address
+4300, 236, call device driver
+4536, 1, IRET
+4537, 21, CPU burst
+4558, 1, switch to kernel mode
+4559, 30, context saved
+4589, 1, find vector 4 in memory position 8
+4590, 1, obtain ISR address
+4591, 236, store information in memory
+4827, 1, IRET
+4828, 100, CPU burst
+4928, 1, switch to kernel mode
+4929, 30, context saved
+4959, 1, find vector 18 in memory position 36
+4960, 1, obtain ISR address
+4961, 109, call device driver
+5070, 1, IRET
+5071, 41, CPU burst
+5112, 1, switch to kernel mode
+5113, 30, context saved
+5143, 1, find vector 18 in memory position 36
+5144, 1, obtain ISR address
+5145, 109, store information in memory
+5254, 1, IRET
+5255, 10, CPU burst
+5265, 1, switch to kernel mode
+5266, 30, context saved
+5296, 1, find vector 12 in memory position 24
+5297, 1, obtain ISR address
+5298, 131, call device driver
+5429, 1, IRET
+5430, 76, CPU burst
+5506, 1, switch to kernel mode
+5507, 30, context saved
+5537, 1, find vector 12 in memory position 24
+5538, 1, obtain ISR address
+5539, 131, store information in memory
+5670, 1, IRET
+5671, 12, CPU burst
+5683, 1, switch to kernel mode
+5684, 30, context saved
+5714, 1, find vector 15 in memory position 30
+5715, 1, obtain ISR address
+5716, 54, call device driver
+5770, 1, IRET
+5771, 57, CPU burst
+5828, 1, switch to kernel mode
+5829, 30, context saved
+5859, 1, find vector 15 in memory position 30
+5860, 1, obtain ISR address
+5861, 54, store information in memory
+5915, 1, IRET
+5916, 93, CPU burst
+6009, 1, switch to kernel mode
+6010, 30, context saved
+6040, 1, find vector 11 in memory position 22
+6041, 1, obtain ISR address
+6042, 509, call device driver
+6551, 1, IRET
+6552, 56, CPU burst
+6608, 1, switch to kernel mode
+6609, 30, context saved
+6639, 1, find vector 11 in memory position 22
+6640, 1, obtain ISR address
+6641, 509, store information in memory
+7150, 1, IRET
+7151, 38, CPU burst
+7189, 1, switch to kernel mode
+7190, 30, context saved
+7220, 1, find vector 8 in memory position 16
+7221, 1, obtain ISR address
+7222, 986, call device driver
+8208, 1, IRET
+8209, 12, CPU burst
+8221, 1, switch to kernel mode
+8222, 30, context saved
+8252, 1, find vector 8 in memory position 16
+8253, 1, obtain ISR address
+8254, 986, store information in memory
+9240, 1, IRET
+9241, 53, CPU burst
+9294, 1, switch to kernel mode
+9295, 30, context saved
+9325, 1, find vector 13 in memory position 26
+9326, 1, obtain ISR address
+9327, 622, call device driver
+9949, 1, IRET
+9950, 10, CPU burst
+9960, 1, switch to kernel mode
+9961, 30, context saved
+9991, 1, find vector 13 in memory position 26
+9992, 1, obtain ISR address
+9993, 622, store information in memory
+10615, 1, IRET
+10616, 85, CPU burst
+10701, 1, switch to kernel mode
+10702, 30, context saved
+10732, 1, find vector 19 in memory position 38
+10733, 1, obtain ISR address
+10734, 638, call device driver
+11372, 1, IRET
+11373, 81, CPU burst
+11454, 1, switch to kernel mode
+11455, 30, context saved
+11485, 1, find vector 19 in memory position 38
+11486, 1, obtain ISR address
+11487, 638, store information in memory
+12125, 1, IRET
+12126, 19, CPU burst
+12145, 1, switch to kernel mode
+12146, 30, context saved
+12176, 1, find vector 9 in memory position 18
+12177, 1, obtain ISR address
+12178, 142, call device driver
+12320, 1, IRET
+12321, 30, CPU burst
+12351, 1, switch to kernel mode
+12352, 30, context saved
+12382, 1, find vector 9 in memory position 18
+12383, 1, obtain ISR address
+12384, 142, store information in memory
+12526, 1, IRET
+12527, 48, CPU burst
+12575, 1, switch to kernel mode
+12576, 30, context saved
+12606, 1, find vector 3 in memory position 6
+12607, 1, obtain ISR address
+12608, 286, call device driver
+12894, 1, IRET
+12895, 35, CPU burst
+12930, 1, switch to kernel mode
+12931, 30, context saved
+12961, 1, find vector 3 in memory position 6
+12962, 1, obtain ISR address
+12963, 286, store information in memory
+13249, 1, IRET
+13250, 88, CPU burst
+13338, 1, switch to kernel mode
+13339, 30, context saved
+13369, 1, find vector 11 in memory position 22
+13370, 1, obtain ISR address
+13371, 509, call device driver
+13880, 1, IRET
+13881, 20, CPU burst
+13901, 1, switch to kernel mode
+13902, 30, context saved
+13932, 1, find vector 11 in memory position 22
+13933, 1, obtain ISR address
+13934, 509, store information in memory
+14443, 1, IRET
+14444, 61, CPU burst
+14505, 1, switch to kernel mode
+14506, 30, context saved
+14536, 1, find vector 1 in memory position 2
+14537, 1, obtain ISR address
+14538, 86, call device driver
+14624, 1, IRET
+14625, 20, CPU burst
+14645, 1, switch to kernel mode
+14646, 30, context saved
+14676, 1, find vector 1 in memory position 2
+14677, 1, obtain ISR address
+14678, 86, store information in memory
+14764, 1, IRET
+14765, 48, CPU burst
+14813, 1, switch to kernel mode
+14814, 30, context saved
+14844, 1, find vector 1 in memory position 2
+14845, 1, obtain ISR address
+14846, 86, call device driver
+14932, 1, IRET
+14933, 33, CPU burst
+14966, 1, switch to kernel mode
+14967, 30, context saved
+14997, 1, find vector 1 in memory position 2
+14998, 1, obtain ISR address
+14999, 86, store information in memory
+15085, 1, IRET
+15086, 91, CPU burst
+15177, 1, switch to kernel mode
+15178, 30, context saved
+15208, 1, find vector 14 in memory position 28
+15209, 1, obtain ISR address
+15210, 442, call device driver
+15652, 1, IRET
+15653, 41, CPU burst
+15694, 1, switch to kernel mode
+15695, 30, context saved
+15725, 1, find vector 14 in memory position 28
+15726, 1, obtain ISR address
+15727, 442, store information in memory
+16169, 1, IRET
+16170, 99, CPU burst
+16269, 1, switch to kernel mode
+16270, 30, context saved
+16300, 1, find vector 3 in memory position 6
+16301, 1, obtain ISR address
+16302, 286, call device driver
+16588, 1, IRET
+16589, 50, CPU burst
+16639, 1, switch to kernel mode
+16640, 30, context saved
+16670, 1, find vector 3 in memory position 6
+16671, 1, obtain ISR address
+16672, 286, store information in memory
+16958, 1, IRET
+16959, 22, CPU burst
+16981, 1, switch to kernel mode
+16982, 30, context saved
+17012, 1, find vector 17 in memory position 34
+17013, 1, obtain ISR address
+17014, 221, call device driver
+17235, 1, IRET
+17236, 66, CPU burst
+17302, 1, switch to kernel mode
+17303, 30, context saved
+17333, 1, find vector 17 in memory position 34
+17334, 1, obtain ISR address
+17335, 221, store information in memory
+17556, 1, IRET
+17557, 55, CPU burst
+17612, 1, switch to kernel mode
+17613, 30, context saved
+17643, 1, find vector 14 in memory position 28
+17644, 1, obtain ISR address
+17645, 442, call device driver
+18087, 1, IRET
+18088, 80, CPU burst
+18168, 1, switch to kernel mode
+18169, 30, context saved
+18199, 1, find vector 14 in memory position 28
+18200, 1, obtain ISR address
+18201, 442, store information in memory
+18643, 1, IRET
+18644, 51, CPU burst
+18695, 1, switch to kernel mode
+18696, 30, context saved
+18726, 1, find vector 15 in memory position 30
+18727, 1, obtain ISR address
+18728, 54, call device driver
+18782, 1, IRET
+18783, 61, CPU burst
+18844, 1, switch to kernel mode
+18845, 30, context saved
+18875, 1, find vector 15 in memory position 30
+18876, 1, obtain ISR address
+18877, 54, store information in memory
+18931, 1, IRET
+18932, 39, CPU burst
+18971, 1, switch to kernel mode
+18972, 30, context saved
+19002, 1, find vector 17 in memory position 34
+19003, 1, obtain ISR address
+19004, 221, call device driver
+19225, 1, IRET
+19226, 80, CPU burst
+19306, 1, switch to kernel mode
+19307, 30, context saved
+19337, 1, find vector 17 in memory position 34
+19338, 1, obtain ISR address
+19339, 221, store information in memory
+19560, 1, IRET
+19561, 96, CPU burst
+19657, 1, switch to kernel mode
+19658, 30, context saved
+19688, 1, find vector 19 in memory position 38
+19689, 1, obtain ISR address
+19690, 638, call device driver
+20328, 1, IRET
+20329, 88, CPU burst
+20417, 1, switch to kernel mode
+20418, 30, context saved
+20448, 1, find vector 19 in memory position 38
+20449, 1, obtain ISR address
+20450, 638, store information in memory
+21088, 1, IRET
+21089, 97, CPU burst
+21186, 1, switch to kernel mode
+21187, 30, context saved
+21217, 1, find vector 8 in memory position 16
+21218, 1, obtain ISR address
+21219, 986, call device driver
+22205, 1, IRET
+22206, 39, CPU burst
+22245, 1, switch to kernel mode
+22246, 30, context saved
+22276, 1, find vector 8 in memory position 16
+22277, 1, obtain ISR address
+22278, 986, store information in memory
+23264, 1, IRET
+23265, 30, CPU burst
+23295, 1, switch to kernel mode
+23296, 30, context saved
+23326, 1, find vector 4 in memory position 8
+23327, 1, obtain ISR address
+23328, 236, call device driver
+23564, 1, IRET
+23565, 77, CPU burst
+23642, 1, switch to kernel mode
+23643, 30, context saved
+23673, 1, find vector 4 in memory position 8
+23674, 1, obtain ISR address
+23675, 236, store information in memory
+23911, 1, IRET
+23912, 85, CPU burst
+23997, 1, switch to kernel mode
+23998, 30, context saved
+24028, 1, find vector 13 in memory position 26
+24029, 1, obtain ISR address
+24030, 622, call device driver
+24652, 1, IRET
+24653, 47, CPU burst
+24700, 1, switch to kernel mode
+24701, 30, context saved
+24731, 1, find vector 13 in memory position 26
+24732, 1, obtain ISR address
+24733, 622, store information in memory
+25355, 1, IRET
+25356, 18, CPU burst
+25374, 1, switch to kernel mode
+25375, 30, context saved
+25405, 1, find vector 20 in memory position 40
+25406, 1, obtain ISR address
+25407, 0, call device driver
+25407, 1, IRET
+25408, 44, CPU burst
+25452, 1, switch to kernel mode
+25453, 30, context saved
+25483, 1, find vector 20 in memory position 40
+25484, 1, obtain ISR address
+25485, 0, store information in memory
+25485, 1, IRET
+25486, 53, CPU burst
+25539, 1, switch to kernel mode
+25540, 30, context saved
+25570, 1, find vector 6 in memory position 12
+25571, 1, obtain ISR address
+25572, 251, call device driver
+25823, 1, IRET
+25824, 69, CPU burst
+25893, 1, switch to kernel mode
+25894, 30, context saved
+25924, 1, find vector 6 in memory position 12
+25925, 1, obtain ISR address
+25926, 251, store information in memory
+26177, 1, IRET
+26178, 72, CPU burst
+26250, 1, switch to kernel mode
+26251, 30, context saved
+26281, 1, find vector 4 in memory position 8
+26282, 1, obtain ISR address
+26283, 236, call device driver
+26519, 1, IRET
+26520, 25, CPU burst
+26545, 1, switch to kernel mode
+26546, 30, context saved
+26576, 1, find vector 4 in memory position 8
+26577, 1, obtain ISR address
+26578, 236, store information in memory
+26814, 1, IRET
+26815, 87, CPU burst
+26902, 1, switch to kernel mode
+26903, 30, context saved
+26933, 1, find vector 5 in memory position 10
+26934, 1, obtain ISR address
+26935, 197, call device driver
+27132, 1, IRET
+27133, 63, CPU burst
+27196, 1, switch to kernel mode
+27197, 30, context saved
+27227, 1, find vector 5 in memory position 10
+27228, 1, obtain ISR address
+27229, 197, store information in memory
+27426, 1, IRET
+27427, 11, CPU burst
+27438, 1, switch to kernel mode
+27439, 30, context saved
+27469, 1, find vector 15 in memory position 30
+27470, 1, obtain ISR address
+27471, 54, call device driver
+27525, 1, IRET
+27526, 74, CPU burst
+27600, 1, switch to kernel mode
+27601, 30, context saved
+27631, 1, find vector 15 in memory position 30
+27632, 1, obtain ISR address
+27633, 54, store information in memory
+27687, 1, IRET
+27688, 19, CPU burst
+27707, 1, switch to kernel mode
+27708, 30, context saved
+27738, 1, find vector 4 in memory position 8
+27739, 1, obtain ISR address
+27740, 236, call device driver
+27976, 1, IRET
+27977, 69, CPU burst
+28046, 1, switch to kernel mode
+28047, 30, context saved
+28077, 1, find vector 4 in memory position 8
+28078, 1, obtain ISR address
+28079, 236, store information in memory
+28315, 1, IRET
+28316, 50, CPU burst
+28366, 1, switch to kernel mode
+28367, 30, context saved
+28397, 1, find vector 5 in memory position 10
+28398, 1, obtain ISR address
+28399, 197, call device driver
+28596, 1, IRET
+28597, 28, CPU burst
+28625, 1, switch to kernel mode
+28626, 30, context saved
+28656, 1, find vector 5 in memory position 10
+28657, 1, obtain ISR address
+28658, 197, store information in memory
+28855, 1, IRET
+28856, 23, CPU burst

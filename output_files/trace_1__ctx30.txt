@@ -1,0 +1,71 @@
+0, 75, CPU burst
+75, 1, switch to kernel mode
+76, 30, context saved
+106, 1, find vector 5 in memory position 10
+107, 1, obtain ISR address
+108, 197, call device driver
+305, 1, IRET
+306, 84, CPU burst
+390, 1, switch to kernel mode
+391, 30, context saved
+421, 1, find vector 5 in memory position 10
+422, 1, obtain ISR address
+423, 197, store information in memory
+620, 1, IRET
+621, 22, CPU burst
+643, 1, switch to kernel mode
+644, 30, context saved
+674, 1, find vector 10 in memory position 20
+675, 1, obtain ISR address
+676, 550, call device driver
+1226, 1, IRET
+1227, 80, CPU burst
+1307, 1, switch to kernel mode
+1308, 30, context saved
+1338, 1, find vector 10 in memory position 20
+1339, 1, obtain ISR address
+1340, 550, store information in memory
+1890, 1, IRET
+1891, 79, CPU burst
+1970, 1, switch to kernel mode
+1971, 30, context saved
+2001, 1, find vector 6 in memory position 12
+2002, 1, obtain ISR address
+2003, 251, call device driver
+2254, 1, IRET
+2255, 68, CPU burst
+2323, 1, switch to kernel mode
+2324, 30, context saved
+2354, 1, find vector 6 in memory position 12
+2355, 1, obtain ISR address
+2356, 251, store information in memory
+2607, 1, IRET
+2608, 71, CPU burst
+2679, 1, switch to kernel mode
+2680, 30, context saved
+2710, 1, find vector 4 in memory position 8
+2711, 1, obtain ISR address
+2712, 236, call device driver
+2948, 1, IRET
+2949, 97, CPU burst
+3046, 1, switch to kernel mode
+3047, 30, context saved
+3077, 1, find vector 4 in memory position 8
+3078, 1, obtain ISR address
+3079, 236, store information in memory
+3315, 1, IRET
+3316, 84, CPU burst
+3400, 1, switch to kernel mode
+3401, 30, context saved
+3431, 1, find vector 7 in memory position 14
+3432, 1, obtain ISR address
+3433, 138, call device driver
+3571, 1, IRET
+3572, 38, CPU burst
+3610, 1, switch to kernel mode
+3611, 30, context saved
+3641, 1, find vector 7 in memory position 14
+3642, 1, obtain ISR address
+3643, 138, store information in memory
+3781, 1, IRET
+3782, 90, CPU burst
